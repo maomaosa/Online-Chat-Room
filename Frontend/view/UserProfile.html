@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Management</title>
+    <link rel="stylesheet" href="../css/UserProfile.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>User Management</h2>
+    <table class="table no-gap-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Active Status</th>
+                <th>Privilege Level</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="usersTableBody">
+            <!-- Users will be loaded here -->
+        </tbody>
+    </table>
+</div>
+
+  
+  
+<!-- Modal for Editing User -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                <button type="button" class="btn-close button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <input type="hidden" id="modalUserId">
+                    <div class="mb-3">
+                        <label for="modalUsername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="modalUsername" >
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="modalPassword" placeholder="******" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalPrivilegeLevel" class="form-label">Privilege Level</label>
+                        <select class="form-select" id="modalPrivilegeLevel" >
+                            <option value="0">User</option>
+                            <option value="1">Coordinator</option>
+                            <option value="2">Administrator</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalAccountStatus" class="form-label">Active Status</label>
+                        <select class="form-select" id="modalAccountStatus" >
+                            <option value="0">Active</option>
+                            <option value="1">Inactive</option>
+                        </select>
+                    </div>
+                    <div
+                    class="alert alert-danger"
+                    role="alert"
+                    id="alert-display"
+                    style="display: none"
+                  >
+                    A simple danger alert—check it out!
+                  </div>
+                    <button type="submit" class="btn btn-primary button">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true" display="none">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmationModalLabel">Profile Updated</h5>
+            </div>
+            <div class="modal-body">
+              Your profile has been edited successfully.
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="../js/Validation.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+<script src="../js/UserProfile.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+</body>
+</html>

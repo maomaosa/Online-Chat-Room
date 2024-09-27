@@ -1,0 +1,38 @@
+.square-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+  }
+  .square {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    border: 5px solid rgba(0, 0, 0, 0);
+  }
+  .square img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+  }
+  .square .textStatus {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+  }
+  .square:nth-child(3) .textStatus {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+  }
+  

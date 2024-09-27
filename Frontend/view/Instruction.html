@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instruction</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/Instruction.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="page" id="page1">
+        <div class="box1">Hi,<span id="username"></span></div>
+        <div class="box2">Welcome to ESN!</div>
+      </div>
+      <div class="button" id="btn">
+        <i class="fa-solid fa-hand-point-right right-point"></i>
+      </div>
+
+      <div class="page page-hidden" id="page2">
+        <div class="share-status">Share Status</div>
+        <div class="white-box">
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item first-child">
+              <img src="../images/ok.jpg" />
+            </li>
+            <li class="list-group-item second-child">ok</li>
+            <li class="list-group-item third-child">
+              I am OK: I do not need help.
+            </li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item first-child">
+              <img src="../images/help.jpg" />
+            </li>
+            <li class="list-group-item second-child">help</li>
+            <li class="list-group-item third-child">
+              I need help, but this is not a life threatening emergency.
+            </li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item first-child">
+              <img src="../images/emergency.jpg" />
+            </li>
+            <li class="list-group-item second-child">emergency</li>
+            <li class="list-group-item third-child">
+              I need help now: this is a life threatening emergency
+            </li>
+          </ul>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item first-child">
+              <img src="../images/white_bg2.jpg" style="opacity: 0" />
+            </li>
+            <li class="list-group-item second-child">(not stated)</li>
+            <li class="list-group-item third-child">
+              The user has not proved any status info.
+            </li>
+          </ul>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input form-check-input-lg"
+            type="checkbox"
+            value=""
+            id="defaultCheck1"
+          />
+
+          <label class="form-check-label" for="defaultCheck1">
+            <div>
+              I acknowledge that I have understand all information stated above.
+            </div>
+          </label>
+        </div>
+        <button type="button" class="btn btn-light" id="continue" disabled>
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/0d1dd613ec.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/Instruction.js"></script>
+    <script src="../../CONST.js" defer></script>
+  </body>
+</html>

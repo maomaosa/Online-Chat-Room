@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcement</title>
+    <link rel="stylesheet" href="../css/Announcement.css" />
+    <link rel="stylesheet" href="../css/Chat.css">
+    <link rel="stylesheet" href="../css/ShareStatus.css">
+    <script src="../../CONST.js" defer></script>
+    <script src="../js/publicGETfunction.js" defer></script>
+    <script src="../js/FormatDate.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/Announcement.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>   
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper chat" style="height: 100%">
+        <div id="page-content-wrapper">
+
+            <div class="container-fluid">
+                <div class="searchBoxAnnouncement" id="searchBoxAnnouncement">
+                    <div class="searchInput">
+                      <input
+                        id="announcementInput"
+                        type="text"
+                        placeholder="please input to search"
+                      />
+                      <i class="fa-solid fa-delete-left" id="deleteAnnouncementValue"></i>
+                    </div>
+                    <i class="fa-solid fa-magnifying-glass" id="searchAnnouncement"></i>
+                  </div>
+                <!-- chat container -->
+                <div id="chatContainer" class="d-flex flex-column"></div>
+               
+                <footer class="bottom" id="footer">
+                    <textarea
+                    id="messageInput"
+                    class="form-control"
+                    placeholder="Write your message here..."
+                    ></textarea>
+                    <button id="sendButton" class="btn btn-outline-primary">
+                    Post
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div id="announcementFiltermodal" class="announcementFiltermodal">
+      <span class="announcementFilterClose" id="announcementFilterClose">&times;</span>
+      <div class="announcement-modal-content">
+        <div class="announcementfiterResult" id="announcementfiterResult">
+        </div>
+        <button id="loadMoreButtonAnnoucement" class="btn btn-outline-secondary">
+          Load More
+        </button>
+      </div>
+    </div>
+<script
+src="https://kit.fontawesome.com/0d1dd613ec.js"
+crossorigin="anonymous"
+></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Chat Wall</title>
+    <link rel="stylesheet" href="../css/square.css" />
+    <link rel="stylesheet" href="../css/Chat.css" />
+    <link rel="stylesheet" href="../css/PublicChat.css" />
+    <link rel="stylesheet" href="../css/ShareStatus.css" />
+    <script src="../../CONST.js" defer></script>
+    <script src="../js/publicGETfunction.js" defer></script>
+    <script src="../js/FormatDate.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/PublicChat.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper chat" style="height: 100%">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="searchBox">
+            <div class="searchInput">
+              <input
+                id="inputBox"
+                type="text"
+                placeholder="please input to search"
+              />
+              <i class="fa-solid fa-delete-left" id="deletePublicValue"></i>
+            </div>
+            <i class="fa-solid fa-magnifying-glass" id="searchPublic"></i>
+          </div>
+
+          <!-- chat container -->
+          <div id="chatContainer" class="d-flex flex-column"></div>
+
+
+
+          <footer class="bottom" id="footer">
+            <textarea
+              id="messageInput"
+              class="form-control"
+              placeholder="Write your message here..."
+            ></textarea>
+            <button id="sendButton" class="btn btn-outline-primary">
+              Post
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="publicFiltermodal" class="publicFiltermodal">
+      <div class="public-modal-content">
+        
+        <span class="publicFilterClose">&times;</span>
+        <div class="fiterResult" id="fiterResult">
+
+        </div>
+        <button id="loadMoreButton" class="btn btn-outline-secondary">
+          Load More
+        </button>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/0d1dd613ec.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

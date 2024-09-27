@@ -1,0 +1,35 @@
+.my-request-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 2.5%;
+  justify-content: space-between;
+}
+
+#my-requests-header-container {
+  width: 100%;
+  margin-top: 2.5%;
+}
+
+#my-requests-main-container {
+  flex-grow: 1;
+  width: 100%;
+  max-height: 84%;
+}
+
+
+.content-primary-btn {
+  color: white;
+  background-color: #4d9db3;
+}
+
+#my-requests-footer-container {
+  width: 100%;
+  margin-bottom: 2.5%;
+}
+
+.footer-primary-btn {
+  color: white;
+  background-color: #3d7c90;
+  width: 100%;
+}

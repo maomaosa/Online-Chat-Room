@@ -1,0 +1,156 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css";
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+}
+#wrapper {
+  height: 85%;
+}
+#directoryContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+.card {
+  border: none;
+}
+.topSearch {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.searchBox {
+  width: 95%;
+  height: 35px;
+  display: flex;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.form-group {
+  height: 100%;
+}
+.custom-select-size {
+  font-size: 10px;
+}
+.searchShareStatusWrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+select {
+  background-color: white;
+  color: #333;
+  width: 77px;
+  height: 100%;
+  font-size: 11px;
+}
+.inputName {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+.searchStatus input {
+  width: 85%;
+  height: 100%;
+}
+.searchStatus .fa-delete-left {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+.fa-magnifying-glass {
+  margin-left: -20px;
+  transform: translateY(40%);
+  color: #888;
+  cursor: pointer;
+}
+.fa-solid {
+  font-size: 12px;
+}
+.searchStatus .searchShareStatus {
+  width: 100%;
+  height: 100%;
+}
+.bg-light {
+  background-color: #3d7c90 !important;
+}
+.navbar-light {
+  background-color: #3d7c90 !important;
+}
+#friends {
+  background-color: #3d7c90 !important;
+  color: white;
+}
+#sidebar-wrapper {
+  max-width: 250px;
+  height: 100%;
+  background-color: #4d9db3;
+  transition: all 0.2s ease;
+  margin-left: -250px;
+}
+
+#userContainer {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.list-group-item {
+  font-size: 12px;
+  border: none;
+  background-color: white !important;
+}
+
+@media (max-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+  #page-content-wrapper.active {
+    margin-left: 0;
+  }
+}
+
+.directoryFiltermodal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.directoryfiterResult{
+  margin-top:20px
+}
+.directory-modal-content {
+  background-color: #fefefe;
+  /* margin: 15% auto;  */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%; 
+  position: relative;
+}
+
+.directoryFilterClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 100;
+  position: absolute;
+}
+
+.directoryFilterClose:hover,
+.directoryFilterClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

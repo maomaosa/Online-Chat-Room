@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Chat Wall</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/Notification.css" />
+    <link rel="stylesheet" href="../css/ShareStatus.css" />
+    <script src="../../CONST.js" defer></script>
+    <script src="../js/publicGETfunction.js" defer></script>
+    <script src="../js/FormatDate.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/Notification.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper chat" style="height: 100%">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <!-- chat container -->
+          <div id="chatContainer" class="d-flex flex-column"></div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  
+  <script
+    src="https://kit.fontawesome.com/0d1dd613ec.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

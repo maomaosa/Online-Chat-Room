@@ -1,0 +1,16 @@
+.fa-check-circle {
+  margin-left: 5px;
+  color: green;
+}
+.fa-exclamation-circle {
+  margin-left: 5px;
+  color: #ffd700;
+}
+.fa-plus-square {
+  margin-left: 5px;
+  color: red;
+}
+.fa-ban {
+  margin-left: 5px;
+  color: gray;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Chat Wall</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/Directory.css">
+    <link rel="stylesheet" href="../css/ShareStatus.css">
+    <link rel="stylesheet" href="../css/Chat.css">
+    <link rel="stylesheet" href="../css/square.css" />
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+
+
+       <div id="page-content-wrapper">
+        <div class="container-fluid">
+        
+            <div id="directoryContainer" class="d-flex flex-column">
+                <div class="card message mb-1">
+                    <div class="topSearch">
+                        <div class="searchBox">
+                            <div class="form-group" >
+                                <select id="searchUsername" class="form-control searchUsername custom-select-size">
+                                    <option value="" disabled selected hidden>Select</option>
+                                    <option value="username" id="filterUsername">Username</option>
+                                    <option value="shareStatus" id="fiterStatus">shareStatus</option>
+                                </select>
+                            </div>
+                   
+                            <div class="searchStatus">
+                                <div class="inputName" id="inputName">
+                                    <input type="text" id="inputBox"/> 
+                                    <i class="fa-solid fa-delete-left" id="delete"></i>
+            
+                                </div>
+                                <div class="form-group" >
+                                <select id="searchShareStatus" class="form-control searchShareStatus form-control-size" >
+                                    <option value="" disabled selected hidden>Select</option>
+                                    <option value="ok">Ok</option>
+                                    <option value="emergency">Emergency</option>
+                                    <option value="help">Help</option>
+                                    <option value="undefined">undefined</option>
+                                  </select>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <i class="fa-solid fa-magnifying-glass" id='search'></i>
+                       
+                    </div>
+ 
+                    <div  id="userList">
+                       
+                    </div>
+                </div>
+                
+                
+
+            </div>
+    </div>
+    <div id="directoryFiltermodal" class="directoryFiltermodal">
+        <div class="directory-modal-content">
+          
+          <div class="directoryFilterClose" id="directoryFilterClose">&times;</div>
+          <div class="directoryfiterResult" id="directoryfiterResult">
+          </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+    src="https://kit.fontawesome.com/0d1dd613ec.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/publicGETfunction.js"></script>
+    <script src="../js/Directory.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

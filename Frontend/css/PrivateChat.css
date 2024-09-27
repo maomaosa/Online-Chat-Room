@@ -1,0 +1,95 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css";
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+}
+.searchBoxPrivate {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+}
+.privateInput {
+  width: 180px;
+  position: relative;
+}
+.searchBoxPrivate input {
+  width: 100%;
+}
+#deletePrivateValue {
+  margin-left: -30px;
+  top: 36px;
+  position: absolute;
+  cursor: pointer;
+  color: #888;
+  cursor: pointer;
+}
+#searchPrivate {
+  margin-left: 5px;
+  transform: translateY(10%);
+  color: #888;
+  cursor: pointer;
+}
+.card {
+  width: 70%;
+}
+.card-header {
+  height: 80%;
+  width: 70%;
+}
+.header1 {
+  display: flex;
+}
+.sent {
+  align-self: flex-end;
+  background-color: #b8d0d7 !important;
+}
+.received {
+  align-self: flex-start;
+}
+
+.username {
+  flex-grow: 1; 
+  margin-right: 0.5rem; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.timestamp {
+  font-size: 12px;
+  justify-content: center;
+}
+.privateFilterModal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.private-modal-content {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #888888;
+  width: 100%; 
+}
+
+.privateFilterClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.privateFilterClose:hover,
+.privateFilterClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
